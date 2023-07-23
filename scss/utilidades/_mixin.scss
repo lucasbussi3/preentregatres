@@ -1,0 +1,22 @@
+
+
+
+//estilos "productos"
+@mixin estilo-productos{
+    height: 100vh;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: justify;
+}
+
+
+
+//estilo recetas media query tablet
+@mixin estilo-receta{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2, 2fr);
+    gap: 1rem;
+    
+}

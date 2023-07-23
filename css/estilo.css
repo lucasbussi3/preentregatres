@@ -1,0 +1,214 @@
+@charset "UTF-8";
+.recetas .macarons, .recetas .milhojas, .recetas .tiramisu {
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: justify;
+  margin: 1rem 0rem 1rem 0rem; }
+
+body {
+  background-color: burlywood;
+  color: #582828; }
+  body header .logo {
+    display: flex;
+    justify-content: center; }
+  body header .nave {
+    flex-direction: column;
+    background-color: aliceblue;
+    justify-content: center;
+    text-align: center; }
+  body header .color-letra {
+    text-decoration: underline; }
+  body header a:active {
+    color: lightsalmon; }
+  body header a {
+    transition: 0.9s; }
+  body header a:hover {
+    padding: 0.5rem;
+    border: 0.1rem solid brown;
+    background-color: whitesmoke;
+    transition: 0.9s; }
+
+#tamañoletra {
+  font-size: 10px; }
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: brown;
+  background-color: lightsalmon; }
+
+.mainhome {
+  height: 150vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 23.5%);
+  gap: 1rem;
+  margin: 0.5rem 1rem 0rem 1rem; }
+  .mainhome div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+h1 {
+  text-align: center;
+  font-size: 19px; }
+
+@media screen and (min-width: 600px) {
+  .mainhome {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 40%); }
+    .mainhome .img4 {
+      grid-column: span 3; } }
+
+@media screen and (min-width: 1024px) {
+  .mainhome {
+    display: flex;
+    height: 50vh;
+    margin-bottom: 1rem; } }
+
+.mainproductos {
+  margin: 2rem 1rem 2rem 1rem; }
+  .mainproductos section h1 {
+    text-align: center;
+    padding: 0.5rem; }
+  .mainproductos .foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+.mainproductos .con1 {
+  height: 100vh;
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: justify;
+  grid-template-rows: 50% 40%; }
+
+.mainproductos .con2 {
+  height: 100vh;
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: justify;
+  grid-template-rows: 40% 50%; }
+
+.mainproductos .con3 {
+  height: 100vh;
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: justify;
+  grid-template-rows: 30% 40%; }
+
+@media screen and (min-width: 600px) {
+  .foto {
+    height: 60%; }
+  .mainproductos .con1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    height: 110vh; }
+  .mainproductos .con2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    height: 80vh; }
+  .mainproductos .con3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    height: 80vh; } }
+
+.recetas {
+  text-align: justify;
+  margin: 2rem 1rem 2rem 1rem; }
+  .recetas .milhojas {
+    grid-template-rows: 10% 80%; }
+  .recetas .tiramisu {
+    grid-template-rows: 20% 80%; }
+  .recetas h1 {
+    text-align: center; }
+
+@media screen and (min-width: 600px) {
+  .recetas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 2fr);
+    gap: 1rem; }
+    .recetas .tiramisu {
+      grid-column: span 2;
+      margin: 1rem 1rem 1rem 1rem; }
+    .recetas .milhojas {
+      margin: 1rem 1rem 1rem 1rem; }
+    .recetas .macarons {
+      margin: 1rem 1rem 1rem 1rem; } }
+
+@media screen and (min-width: 600px) {
+  a {
+    font-size: 16px !important; } }
+
+.conocenos {
+  margin: 2rem 1rem 2rem 1rem; }
+  .conocenos #carru {
+    display: none; }
+
+@media screen and (min-width: 600px) {
+  #logo {
+    display: none; }
+  .conocenos #carru {
+    display: flex;
+    text-align: center;
+    gap: 1rem;
+    justify-content: center; }
+  .conocenos .carrusel {
+    display: none; } }
+
+@media screen and (min-width: 1024px) {
+  #carru div img {
+    display: flex; } }
+
+/*bootstrap contacto*/
+.tamaño {
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  padding: 0.5rem; }
+
+.color-letra {
+  color: brown;
+  font-family: serif;
+  font-size: medium; }
+
+.form {
+  text-align: center;
+  border: 0.2rem solid whitesmoke;
+  text-transform: uppercase;
+  margin: 2rem 0rem 2rem 0rem; }
+  .form .mb-3 .boton {
+    background-color: brown;
+    text-align: center;
+    justify-content: space-around;
+    display: flex; }
+
+.boton .formularios {
+  background-color: brown;
+  border: 0.1rem solid whitesmoke; }
+
+.boton .formularios:hover {
+  background-color: lightsalmon;
+  border: 0.1rem solid whitesmoke; }
+
+.boton .formularios:active {
+  background-color: brown; }
+
+header .logo {
+  animation: animacion-logo 10s infinite 1s; }
+
+@keyframes animacion-logo {
+  0% {
+    transform: scale(0.9); }
+  50% {
+    transform: scale(0.95); }
+  100% {
+    transform: scale(1); } }

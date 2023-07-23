@@ -1,0 +1,274 @@
+@import "utilidades/mixin";
+@import "utilidades/variables";
+@import "utilidades/extend";
+//estilos generales en cuanto a menu, footer, body y colores letra de todos html
+//estilo menu para celus//
+body{
+        background-color: $colorprimario;
+        color: $colorsecundario;
+    header{
+        .logo{
+            display: flex;
+            justify-content: center;
+        }
+        .nave{
+            flex-direction: column;
+            background-color: aliceblue;
+            justify-content: center;
+            text-align: center;}
+        .color-letra{
+            text-decoration: underline;}
+        a:active{ 
+            color: lightsalmon;
+        }
+        a{
+            transition: 0.9s;}
+        a:hover{
+            padding: 0.5rem;
+            border: 0.1rem solid brown;
+            background-color: whitesmoke;  
+            transition: 0.9s;
+    }}}
+
+#tamañoletra{
+    font-size: 10px;
+}
+footer{
+    text-align: center;
+    padding: 1rem;
+    color: brown;
+    background-color: lightsalmon;
+}
+
+
+//estilos particulares de home
+.mainhome {
+    height: 150vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 23.5%);
+    gap: 1rem;
+    margin: 0.5rem 1rem 0rem 1rem ;
+    div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+}
+h1{
+    text-align: center;
+    font-size: 19px;
+}
+//////////////////////////////////MEDIAS QUERYS///////////////////////////
+//HOME
+@media screen and (min-width:600px) {
+    .mainhome{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 40%);
+        .img4{
+        grid-column: span 3;
+    }
+   
+    
+}}
+
+@media screen and (min-width:1024px) {
+    .mainhome{
+    display: flex;
+    height: 50vh;
+    margin-bottom: 1rem;
+    }
+}
+//estilos generales de productos*/
+.mainproductos{
+    margin: 2rem 1rem 2rem 1rem;
+    section h1{
+    text-align: center;
+    padding: 0.5rem;
+    }
+    .foto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+}
+
+//estilo particular seccion macarons*/
+.mainproductos{
+
+    .con1{
+    @include estilo-productos;
+    grid-template-rows: 50% 40%;
+    
+}
+//estilo particular seccion mil hojas*/
+    .con2{
+    @include estilo-productos;
+    grid-template-rows: 40% 50%;
+    
+}
+//estilo particular seccion tiramisu*/
+    .con3{
+    @include estilo-productos;
+    grid-template-rows: 30% 40%;
+    
+}
+}
+//media query tablet productos*/
+@media screen and (min-width:600px) {  
+
+.foto{
+    height: 60%;
+}
+
+.mainproductos{
+    .con1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    height: 110vh;}
+    .con2{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(1, 1fr);
+    height: 80vh;}
+    .con3{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(1, 1fr);
+    height: 80vh;
+}}}
+//estilo para RECETAS*/
+//estilo macarons*/
+
+.recetas{
+    text-align: justify;
+    margin: 2rem 1rem 2rem 1rem;
+    
+    .macarons{
+    @extend %recetas;
+
+    }
+    .milhojas{
+    @extend %recetas;
+    grid-template-rows: 10% 80%;
+    }
+    .tiramisu{
+    @extend %recetas;
+    grid-template-rows: 20% 80%;
+    }
+        h1{
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:600px) {
+.recetas{
+    @include estilo-receta;
+
+    .tiramisu{
+    grid-column: span 2;
+    margin: $estiloreceta;
+}
+    .milhojas{
+    margin: $estiloreceta;
+}
+    .macarons{
+    margin: $estiloreceta;
+}
+}}
+
+//letra menú
+@media screen and (min-width:600px) {
+    a{
+        font-size: 16px !important;
+        
+}
+}
+//estilos "conocenos"
+.conocenos{
+    margin: 2rem 1rem 2rem 1rem;
+    #carru{
+    display: none; 
+}}
+//media query tablet conocenos
+@media screen and (min-width:600px) {
+    
+#logo{
+    display: none;
+}
+.conocenos{
+    #carru{
+    display: flex;
+    text-align: center;
+    gap: 1rem;
+    justify-content: center;
+    }
+    .carrusel{
+    display: none;
+    }
+}
+}
+//media query desktop conocenos
+@media screen and (min-width:1024px) {
+    #carru div img{
+        display: flex;
+    }
+}
+//CONTACTO
+/*bootstrap contacto*/
+.tamaño{
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    padding: 0.5rem;
+}
+.color-letra{
+    color: brown;
+    font-family: serif;
+    font-size: medium;
+ }
+
+.form{
+     text-align: center;
+     border: 0.2rem solid whitesmoke;
+     text-transform: uppercase;
+     margin: 2rem 0rem 2rem 0rem;
+ 
+    .mb-3 .boton{
+     background-color: brown;
+     text-align: center;
+     justify-content: space-around;
+     display: flex;
+ }
+ }
+ .boton{
+
+    .formularios{
+     background-color: brown;
+     border: 0.1rem solid whitesmoke;
+ }
+    .formularios:hover{
+     background-color: lightsalmon;
+     border: 0.1rem solid whitesmoke;
+ }
+    .formularios:active{
+     background-color: brown;
+ }
+ }
+ //animacion
+ header .logo{
+    animation: animacion-logo 10s infinite 1s;
+ }
+ @keyframes animacion-logo{
+    0%{
+        transform: scale(0.9);
+    }
+    50%{
+        transform: scale(0.95);
+    }
+    100%{
+        transform: scale(1);
+    }
+ }
