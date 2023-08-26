@@ -10,10 +10,11 @@ body{
         .logo{
             display: flex;
             justify-content: center;
+            border-radius: 15%;
         }
         .nave{
             flex-direction: column;
-            background-color: aliceblue;
+            background-color: whitesmoke;
             justify-content: center;
             text-align: center;}
         .color-letra{
@@ -37,7 +38,9 @@ footer{
     text-align: center;
     padding: 1rem;
     color: brown;
-    background-color: lightsalmon;
+    background-color: whitesmoke;
+    
+    
 }
 
 
@@ -53,6 +56,7 @@ footer{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    
     }
 }
 h1{

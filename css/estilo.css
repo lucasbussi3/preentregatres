@@ -7,14 +7,15 @@
   margin: 1rem 0rem 1rem 0rem; }
 
 body {
-  background-color: burlywood;
+  background-color: #fce7cc;
   color: #582828; }
   body header .logo {
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    border-radius: 15%; }
   body header .nave {
     flex-direction: column;
-    background-color: aliceblue;
+    background-color: whitesmoke;
     justify-content: center;
     text-align: center; }
   body header .color-letra {
@@ -36,7 +37,7 @@ footer {
   text-align: center;
   padding: 1rem;
   color: brown;
-  background-color: lightsalmon; }
+  background-color: whitesmoke; }
 
 .mainhome {
   height: 150vh;
